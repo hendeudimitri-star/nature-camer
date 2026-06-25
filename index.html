@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nature Camer — Écotourisme premium au Cameroun. Safaris, trekking, plages, pêche, culture. Le Cameroun vous attend.">
+<meta name="keywords" content="Cameroun tourisme, écotourisme Cameroun, safari Cameroun, trek Mont Cameroun, voyage Cameroun, nature camer">
+<title>Nature Camer — Le Cameroun vous attend</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/logo/Fichier%201@4x-8.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/237690000000?text=Bonjour%20Nature%20Camer%2C%20je%20souhaite%20des%20informations%20sur%20vos%20s%C3%A9jours." class="whatsapp-float" target="_blank" rel="noopener" title="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.64 4.733 1.857 6.794L4 29l7.425-1.826A12.94 12.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="white"/>
+    <path d="M21.5 18.5c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.79-1.68-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.02 1-1.02 2.43 0 1.43 1.04 2.81 1.19 3.01.15.2 2.04 3.11 4.94 4.36.69.3 1.23.47 1.65.61.69.22 1.32.19 1.82.12.55-.08 1.7-.7 1.94-1.37.24-.67.24-1.25.17-1.37-.07-.12-.27-.19-.57-.34z" fill="#25D366"/>
+  </svg>
+</a>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <img src="assets/logo/Fichier%201@4x-8.png" alt="Nature Camer" style="height:44px; width:auto;">
+  </a>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about" data-fr="À propos" data-en="About">À propos</a></li>
+    <li><a href="#destinations" data-fr="Destinations" data-en="Destinations">Destinations</a></li>
+    <li><a href="#circuits" data-fr="Circuits" data-en="Tours">Circuits</a></li>
+    <li><a href="#peche" data-fr="Pêche" data-en="Fishing">Pêche</a></li>
+    <li><a href="#galerie" data-fr="Galerie" data-en="Gallery">Galerie</a></li>
+    <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+    <a href="#contact" class="btn-reserve-nav" data-fr="Réserver" data-en="Book Now">Réserver</a>
+  </div>
+
+  <button class="hamburger" id="hamburgerBtn" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMobile()">×</button>
+  <a href="#about" onclick="toggleMobile()" data-fr="À propos" data-en="About">À propos</a>
+  <a href="#destinations" onclick="toggleMobile()" data-fr="Destinations" data-en="Destinations">Destinations</a>
+  <a href="#circuits" onclick="toggleMobile()" data-fr="Circuits" data-en="Tours">Circuits</a>
+  <a href="#peche" onclick="toggleMobile()" data-fr="Pêche & Aventure" data-en="Fishing & Adventure">Pêche & Aventure</a>
+  <a href="#galerie" onclick="toggleMobile()" data-fr="Galerie" data-en="Gallery">Galerie</a>
+  <a href="#contact" onclick="toggleMobile()" data-fr="Contact & Réservation" data-en="Contact & Booking">Contact & Réservation</a>
+</div>
+
+<!-- ══════════ HERO ══════════ -->
+<section id="hero">
+  <div class="hero-slides" id="heroSlides">
+    <div class="hero-slide active" style="background-image: url('assets/image/hero%20section%201.avif');"></div>
+    <div class="hero-slide" style="background-image: url('assets/image/hero%20section%202.avif');"></div>
+    <div class="hero-slide" style="background-image: url('assets/image/hero%20section%203.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('assets/image/hero%20section%204.webp');"></div>
+    <div class="hero-slide" style="background-image: url('assets/image/hero%20section%205.webp');"></div>
+  </div>
+
+  <div class="hero-content">
+    <span class="hero-eyebrow" data-fr="Écotourisme Premium — République du Cameroun" data-en="Premium Ecotourism — Republic of Cameroon">Écotourisme Premium — République du Cameroun</span>
+    <h1 class="hero-title"><em>Nature</em> Camer</h1>
+    <p class="hero-subtitle" data-fr="L'Afrique en miniature" data-en="Africa in Miniature">L'Afrique en miniature</p>
+    <div class="hero-divider"></div>
+    <p class="hero-tagline" data-fr="Le Cameroun vous attend." data-en="Cameroon is waiting for you.">Le Cameroun vous attend.</p>
+    <div class="hero-cta-group">
+      <a href="#circuits" class="btn-primary" data-fr="Découvrir nos circuits" data-en="Explore Our Tours">Découvrir nos circuits</a>
+      <a href="#contact" class="btn-outline" data-fr="Réserver une expérience" data-en="Book an Experience">Réserver une expérience</a>
+    </div>
+  </div>
+
+  <div class="hero-indicators" id="heroIndicators"></div>
+
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span data-fr="Défiler" data-en="Scroll">Défiler</span>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="about-strip">
+  <div class="strip-item">
+    <span class="strip-icon">🌿</span>
+    <span class="strip-text" data-fr="Écotourisme Certifié" data-en="Certified Ecotourism">Écotourisme Certifié</span>
+  </div>
+  <div class="strip-sep"></div>
+  <div class="strip-item">
+    <span class="strip-icon">🏔️</span>
+    <span class="strip-text" data-fr="Trek & Montagne" data-en="Trek & Mountain">Trek & Montagne</span>
+  </div>
+  <div class="strip-sep"></div>
+  <div class="strip-item">
+    <span class="strip-icon">🐘</span>
+    <span class="strip-text" data-fr="Safaris & Faune" data-en="Safaris & Wildlife">Safaris & Faune</span>
+  </div>
+  <div class="strip-sep"></div>
+  <div class="strip-item">
+    <span class="strip-icon">🏖️</span>
+    <span class="strip-text" data-fr="Plages Atlantique" data-en="Atlantic Beaches">Plages Atlantique</span>
+  </div>
+  <div class="strip-sep"></div>
+  <div class="strip-item">
+    <span class="strip-icon">✦</span>
+    <span class="strip-text" data-fr="Séjours Premium" data-en="Premium Stays">Séjours Premium</span>
+  </div>
+</div>
+
+<!-- ══════════ À PROPOS ══════════ -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap reveal">
+      <img class="about-img-main" src="assets/image/Le_Mont_Cameroun_depuis_Limb%C3%A9.JPG" alt="Mont Cameroun">
+      <img class="about-img-accent" src="assets/image/1-mont-bamboutos-c-laroutedeschefferies.webp" alt="Mont Bamboutos">
+      <div class="about-badge">
+        <span class="about-badge-num">100%</span>
+        <span class="about-badge-text" data-fr="Authentique" data-en="Authentic">Authentique</span>
+      </div>
+    </div>
+
+    <div class="about-content reveal">
+      <div class="section-header" style="text-align:left; margin-bottom:2rem;">
+        <span class="section-eyebrow" data-fr="Notre histoire" data-en="Our Story">Notre histoire</span>
+        <h2 class="section-title" data-fr="Le Cameroun comme vous ne l'avez jamais <em>imaginé</em>" data-en="Cameroon like you've never <em>imagined</em> it">Le Cameroun comme vous ne l'avez jamais <em>imaginé</em></h2>
+        <div class="section-rule" style="margin:1.5rem 0;"></div>
+      </div>
+
+      <p class="about-lead" data-fr="Nature Camer est née d'une passion profonde pour la terre camerounaise — ses montagnes majestueuses, ses forêts tropicales luxuriantes, ses savanes infinies et ses côtes atlantiques préservées." data-en="Nature Camer was born from a deep passion for the Cameroonian land — its majestic mountains, lush tropical forests, endless savannahs and preserved Atlantic coasts.">
+        Nature Camer est née d'une passion profonde pour la terre camerounaise — ses montagnes majestueuses, ses forêts tropicales luxuriantes, ses savanes infinies et ses côtes atlantiques préservées.
+      </p>
+      <p class="about-text" data-fr="Nous créons des expériences touristiques uniques qui marient le luxe naturel avec l'authenticité culturelle. Chaque séjour est pensé pour vous immerger dans la richesse du Cameroun, souvent surnommé « l'Afrique en miniature » pour sa diversité exceptionnelle." data-en="We create unique tourism experiences that blend natural luxury with cultural authenticity. Every stay is designed to immerse you in Cameroon's richness, often called 'Africa in Miniature' for its exceptional diversity.">
+        Nous créons des expériences touristiques uniques qui marient le luxe naturel avec l'authenticité culturelle. Chaque séjour est pensé pour vous immerger dans la richesse du Cameroun, souvent surnommé « l'Afrique en miniature » pour sa diversité exceptionnelle.
+      </p>
+      <p class="about-text" data-fr="Du Mont Cameroun aux plages de Kribi, en passant par le Parc National de Waza et la Réserve du Dja classée UNESCO — Nature Camer vous ouvre les portes d'un pays aux mille visages, où la nature règne en maître." data-en="From Mount Cameroon to the beaches of Kribi, through Waza National Park and the UNESCO-listed Dja Reserve — Nature Camer opens the doors of a thousand-faced country where nature reigns supreme.">
+        Du Mont Cameroun aux plages de Kribi, en passant par le Parc National de Waza et la Réserve du Dja classée UNESCO — Nature Camer vous ouvre les portes d'un pays aux mille visages, où la nature règne en maître.
+      </p>
+
+      <div class="about-values">
+        <div class="about-value">
+          <div class="about-value-icon"></div>
+          <span class="about-value-text" data-fr="Diversité Unique" data-en="Unique Diversity">Diversité Unique</span>
+        </div>
+        <div class="about-value">
+          <div class="about-value-icon"></div>
+          <span class="about-value-text" data-fr="Luxe Naturel" data-en="Natural Luxury">Luxe Naturel</span>
+        </div>
+        <div class="about-value">
+          <div class="about-value-icon"></div>
+          <span class="about-value-text" data-fr="Authenticité" data-en="Authenticity">Authenticité</span>
+        </div>
+        <div class="about-value">
+          <div class="about-value-icon"></div>
+          <span class="about-value-text" data-fr="Guides Locaux" data-en="Local Guides">Guides Locaux</span>
+        </div>
+      </div>
+
+      <a href="#circuits" class="btn-primary" data-fr="Découvrir nos offres" data-en="Discover Our Offers">Découvrir nos offres</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ DESTINATIONS ══════════ -->
+<section id="destinations">
+  <div style="max-width:1280px; margin:0 auto; padding:0 0 4rem;">
+    <div class="section-header reveal">
+      <span class="section-eyebrow" data-fr="Explorez le Cameroun" data-en="Explore Cameroon">Explorez le Cameroun</span>
+      <h2 class="section-title" data-fr="Des destinations <em>inoubliables</em>" data-en="<em>Unforgettable</em> destinations">Des destinations <em>inoubliables</em></h2>
+      <div class="section-rule"></div>
+      <p class="section-desc" data-fr="De la montagne à l'océan, de la forêt à la savane, le Cameroun révèle ses trésors à ceux qui osent l'explorer." data-en="From mountains to ocean, forest to savannah, Cameroon reveals its treasures to those who dare explore it.">De la montagne à l'océan, de la forêt à la savane, le Cameroun révèle ses trésors à ceux qui osent l'explorer.</p>
+    </div>
+  </div>
+
+  <div class="dest-grid">
+    <div class="dest-card reveal">
+      <img src="assets/image/eascension-mont-cameroun-nirvatravel-agence.jpg" alt="Mont Cameroun">
+      <div class="dest-card-overlay">
+        <span class="dest-cat" data-fr="Trek & Aventure" data-en="Trek & Adventure">Trek & Aventure</span>
+        <h3 class="dest-name" data-fr="Mont Cameroun" data-en="Mount Cameroon">Mont Cameroun</h3>
+        <p class="dest-desc" data-fr="Le toit de l'Afrique de l'Ouest. Volcan actif, randonnée légendaire à 4 040 m, vues époustouflantes sur l'Atlantique." data-en="The roof of West Africa. Active volcano, legendary trek at 4,040 m, breathtaking views of the Atlantic.">Le toit de l'Afrique de l'Ouest. Volcan actif, randonnée légendaire à 4 040 m.</p>
+        <a href="#contact" class="dest-link" data-fr="Explorer" data-en="Explore">Explorer</a>
+      </div>
+    </div>
+
+    <div class="dest-card reveal">
+      <img src="assets/image/Campement_au_parc_national_de_Waza_dans_la_r%C3%A9gion_de_l%27Extr%C3%AAme-Nord_au_Cameroun.jpg" alt="Parc National de Waza">
+      <div class="dest-card-overlay">
+        <span class="dest-cat" data-fr="Safari & Faune" data-en="Safari & Wildlife">Safari & Faune</span>
+        <h3 class="dest-name" data-fr="Parc National de Waza" data-en="Waza National Park">Parc National de Waza</h3>
+        <p class="dest-desc" data-fr="Éléphants, lions, girafes, buffles et antilopes dans l'un des plus beaux parcs de savane d'Afrique centrale." data-en="Elephants, lions, giraffes, buffalos and antelopes in one of Central Africa's finest savannah parks.">Éléphants, lions, girafes, buffles dans un décor de savane exceptionnel.</p>
+        <a href="#contact" class="dest-link" data-fr="Explorer" data-en="Explore">Explorer</a>
+      </div>
+    </div>
+
+    <div class="dest-card reveal">
+      <img src="assets/image/kribi-4.jpg" alt="Kribi & Limbe">
+      <div class="dest-card-overlay">
+        <span class="dest-cat" data-fr="Plages & Détente" data-en="Beaches & Relaxation">Plages & Détente</span>
+        <h3 class="dest-name" data-fr="Kribi & Limbe" data-en="Kribi & Limbe">Kribi & Limbe</h3>
+        <p class="dest-desc" data-fr="Plages de sable fin, chutes de la Lobé qui se jettent dans l'océan, eaux turquoise et cocotiers à perte de vue." data-en="Fine sandy beaches, Lobé waterfalls flowing into the ocean, turquoise waters and endless coconut palms.">Plages de sable fin, chutes de la Lobé dans l'océan, cocotiers.</p>
+        <a href="#contact" class="dest-link" data-fr="Explorer" data-en="Explore">Explorer</a>
+      </div>
+    </div>
+
+    <div class="dest-card reveal">
+      <img src="assets/image/R%C3%A9serve%20de%20faune%20du%20Dja.jpg" alt="Réserve du Dja">
+      <div class="dest-card-overlay">
+        <span class="dest-cat" data-fr="Nature & UNESCO" data-en="Nature & UNESCO">Nature & UNESCO</span>
+        <h3 class="dest-name" data-fr="Réserve du Dja" data-en="Dja Faunal Reserve">Réserve du Dja</h3>
+        <p class="dest-desc" data-fr="L'une des plus grandes forêts tropicales protégées d'Afrique. Gorilles, chimpanzés, okapis et une biodiversité rare." data-en="One of Africa's largest protected tropical forests. Gorillas, chimpanzees, okapis and rare biodiversity.">Gorilles, chimpanzés, okapis, biodiversité exceptionnelle classée UNESCO.</p>
+        <a href="#contact" class="dest-link" data-fr="Explorer" data-en="Explore">Explorer</a>
+      </div>
+    </div>
+
+    <div class="dest-card reveal">
+      <img src="assets/image/Hautes%20Terres%20de%20l%27Ouest.jpg" alt="Hautes Terres de l'Ouest">
+      <div class="dest-card-overlay">
+        <span class="dest-cat" data-fr="Culture & Paysages" data-en="Culture & Landscapes">Culture & Paysages</span>
+        <h3 class="dest-name" data-fr="Hautes Terres de l'Ouest" data-en="Western Highlands">Hautes Terres de l'Ouest</h3>
+        <p class="dest-desc" data-fr="Paysages verdoyants, lacs de cratère, plantations de thé, chefferies traditionnelles et artisanat bamoun." data-en="Lush landscapes, crater lakes, tea plantations, traditional chiefdoms and Bamoun crafts.">Lacs de cratère, plantations de thé, chefferies traditionnelles bamoun.</p>
+        <a href="#contact" class="dest-link" data-fr="Explorer" data-en="Explore">Explorer</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CIRCUITS ══════════ -->
+<section id="circuits">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div class="section-header reveal">
+      <span class="section-eyebrow" data-fr="Nos programmes" data-en="Our Programmes">Nos programmes</span>
+      <h2 class="section-title" data-fr="Circuits <em>sur mesure</em>" data-en="<em>Tailor-made</em> Tours">Circuits <em>sur mesure</em></h2>
+      <div class="section-rule"></div>
+      <p class="section-desc" data-fr="Chaque voyage est unique. Nous concevons des expériences personnalisées qui correspondent à vos envies, votre rythme et votre budget." data-en="Every journey is unique. We design personalized experiences that match your desires, pace and budget.">Chaque voyage est unique. Nous concevons des expériences personnalisées qui correspondent à vos envies, votre rythme et votre budget.</p>
+    </div>
+
+    <div class="circuits-grid">
+      <!-- Card 1 -->
+      <div class="circuit-card reveal">
+        <img class="circuit-card-img" src="assets/image/eascension-mont-cameroun-nirvatravel-agence.jpg" alt="Trek Mont Cameroun">
+        <span class="circuit-card-tag" data-fr="Best-seller" data-en="Best-seller">Best-seller</span>
+        <div class="circuit-card-body">
+          <div class="circuit-card-meta">
+            <span class="circuit-meta-item">📅 <span data-fr="7 jours" data-en="7 days">7 jours</span></span>
+            <span class="circuit-meta-item">👥 <span data-fr="2–10 pers." data-en="2–10 pers.">2–10 pers.</span></span>
+          </div>
+          <h3 class="circuit-card-title" data-fr="Trek du Mont Cameroun" data-en="Mount Cameroon Trek">Trek du Mont Cameroun</h3>
+          <p class="circuit-card-desc" data-fr="Ascension mythique du toit de l'Afrique de l'Ouest. Traversée des plantations de thé, forêt tropicale, alpage et cratère volcanique. Nuits en refuge et bivouac au sommet." data-en="Legendary ascent of West Africa's rooftop. Through tea plantations, tropical forest, alpine meadows and volcanic crater. Nights in refuges and summit bivouac.">Ascension mythique du toit de l'Afrique de l'Ouest. Traversée des plantations de thé, forêt tropicale, alpage et cratère volcanique.</p>
+          <div class="circuit-card-footer">
+            <div>
+              <span class="circuit-price">1 900€</span>
+              <span class="circuit-price-label" data-fr="/ personne" data-en="/ person">/ personne</span>
+            </div>
+            <a href="#contact" class="btn-sm" data-fr="Réserver" data-en="Book">Réserver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="circuit-card reveal">
+        <img class="circuit-card-img" src="assets/image/Campement_au_parc_national_de_Waza_dans_la_r%C3%A9gion_de_l%27Extr%C3%AAme-Nord_au_Cameroun.jpg" alt="Safari Waza">
+        <span class="circuit-card-tag" data-fr="Safari" data-en="Safari">Safari</span>
+        <div class="circuit-card-body">
+          <div class="circuit-card-meta">
+            <span class="circuit-meta-item">📅 <span data-fr="5 jours" data-en="5 days">5 jours</span></span>
+            <span class="circuit-meta-item">👥 <span data-fr="2–8 pers." data-en="2–8 pers.">2–8 pers.</span></span>
+          </div>
+          <h3 class="circuit-card-title" data-fr="Safari Waza & Grand Nord" data-en="Waza Safari & Far North">Safari Waza & Grand Nord</h3>
+          <p class="circuit-card-desc" data-fr="Immersion dans les parcs de Waza, Bouba Ndjida et Bénoué. Observation des éléphants, lions, hippopotames et oiseaux migrateurs. Nuits en lodge de charme." data-en="Immersion in Waza, Bouba Ndjida and Bénoué parks. Elephant, lion, hippo and migratory bird watching. Nights in charming lodges.">Observation des éléphants, lions, hippopotames dans les plus beaux parcs du nord du Cameroun.</p>
+          <div class="circuit-card-footer">
+            <div>
+              <span class="circuit-price">2 200€</span>
+              <span class="circuit-price-label" data-fr="/ personne" data-en="/ person">/ personne</span>
+            </div>
+            <a href="#contact" class="btn-sm" data-fr="Réserver" data-en="Book">Réserver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="circuit-card reveal">
+        <img class="circuit-card-img" src="assets/image/kribi-4.jpg" alt="Côte Camerounaise">
+        <span class="circuit-card-tag" data-fr="Détente" data-en="Relaxation">Détente</span>
+        <div class="circuit-card-body">
+          <div class="circuit-card-meta">
+            <span class="circuit-meta-item">📅 <span data-fr="6 jours" data-en="6 days">6 jours</span></span>
+            <span class="circuit-meta-item">👥 <span data-fr="2 pers." data-en="2 pers.">2 pers.</span></span>
+          </div>
+          <h3 class="circuit-card-title" data-fr="Escapade Côtière Kribi" data-en="Kribi Coastal Getaway">Escapade Côtière Kribi</h3>
+          <p class="circuit-card-desc" data-fr="Plages paradisiaques, chutes de la Lobé, excursions en pirogue, découverte des tortues marines et fruits de mer frais. Détente absolue." data-en="Paradise beaches, Lobé waterfalls, pirogue excursions, sea turtle discovery and fresh seafood. Absolute relaxation.">Plages paradisiaques, chutes de la Lobé, pirogue et fruits de mer frais.</p>
+          <div class="circuit-card-footer">
+            <div>
+              <span class="circuit-price">1 600€</span>
+              <span class="circuit-price-label" data-fr="/ personne" data-en="/ person">/ personne</span>
+            </div>
+            <a href="#contact" class="btn-sm" data-fr="Réserver" data-en="Book">Réserver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="circuit-card reveal">
+        <img class="circuit-card-img" src="assets/image/1-mont-bamboutos-c-laroutedeschefferies.webp" alt="Grand Tour Cameroun">
+        <span class="circuit-card-tag" data-fr="Premium" data-en="Premium">Premium</span>
+        <div class="circuit-card-body">
+          <div class="circuit-card-meta">
+            <span class="circuit-meta-item">📅 <span data-fr="15 jours" data-en="15 days">15 jours</span></span>
+            <span class="circuit-meta-item">👥 <span data-fr="2–8 pers." data-en="2–8 pers.">2–8 pers.</span></span>
+          </div>
+          <h3 class="circuit-card-title" data-fr="Grand Tour du Cameroun" data-en="Grand Tour of Cameroon">Grand Tour du Cameroun</h3>
+          <p class="circuit-card-desc" data-fr="Le meilleur du Cameroun : montagne, savane, côte, culture et forêt tropicale. Hébergements premium, guide privé, service tout inclus." data-en="The best of Cameroon: mountain, savannah, coast, culture and tropical forest. Premium accommodation, private guide, all-inclusive service.">Le meilleur du Cameroun en 15 jours : montagne, savane, côte, culture. Tout inclus.</p>
+          <div class="circuit-card-footer">
+            <div>
+              <span class="circuit-price">4 800€</span>
+              <span class="circuit-price-label" data-fr="/ personne" data-en="/ person">/ personne</span>
+            </div>
+            <a href="#contact" class="btn-sm" data-fr="Réserver" data-en="Book">Réserver</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ STATS ══════════ -->
+<section id="experience">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <span class="stat-num">10+</span>
+      <span class="stat-label" data-fr="Parcs Nationaux" data-en="National Parks">Parcs Nationaux</span>
+    </div>
+    <div class="stat-item reveal">
+      <span class="stat-num">4 040</span>
+      <span class="stat-label" data-fr="m — Mont Cameroun" data-en="m — Mt. Cameroon">m — Mont Cameroun</span>
+    </div>
+    <div class="stat-item reveal">
+      <span class="stat-num">40+</span>
+      <span class="stat-label" data-fr="Langues Parlées" data-en="Languages Spoken">Langues Parlées</span>
+    </div>
+    <div class="stat-item reveal">
+      <span class="stat-num">100%</span>
+      <span class="stat-label" data-fr="Circuits Personnalisés" data-en="Custom Itineraries">Circuits Personnalisés</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PÊCHE ══════════ -->
+<section id="peche">
+  <img class="peche-bg" src="assets/image/Cameroun%20-%20La%20P%C3%AAche%20Sportive.jpg" alt="Océan Atlantique Cameroun">
+  <div class="peche-content">
+    <div>
+      <div>
+        <span class="section-eyebrow" data-fr="Pêche & Aventure" data-en="Fishing & Adventure">Pêche & Aventure</span>
+        <h2 class="section-title" data-fr="La pêche sportive sur la côte <em>camerounaise</em>" data-en="Sport fishing on the <em>Cameroonian</em> coast">La pêche sportive sur la côte <em>camerounaise</em></h2>
+        <div class="section-rule"></div>
+      </div>
+      <p class="peche-text" data-fr="Le Cameroun possède une façade atlantique riche en poissons de sport. Ses eaux poissonneuses regorgent de marlins, thons, barracudas, carangues et capitaines. Nos expéditions de pêche sont conçues pour les passionnés comme pour les néophytes." data-en="Cameroon has an Atlantic coastline rich in sport fish. Its fish-filled waters teem with marlins, tuna, barracuda, jackfish and captain fish. Our fishing expeditions are designed for enthusiasts and beginners alike.">
+        Le Cameroun possède une façade atlantique riche en poissons de sport. Ses eaux poissonneuses regorgent de marlins, thons, barracudas, carangues et capitaines.
+      </p>
+
+      <div class="peche-features">
+        <div class="peche-feature">
+          <span class="peche-feature-title" data-fr="Pêche en Haute Mer" data-en="Deep Sea Fishing">Pêche en Haute Mer</span>
+          <span class="peche-feature-desc" data-fr="Marlins, thons, barracudas — les plus beaux poissons de l'Atlantique camerounais." data-en="Marlins, tuna, barracuda — the finest fish of the Cameroonian Atlantic.">Marlins, thons, barracudas — les plus beaux poissons de l'Atlantique camerounais.</span>
+        </div>
+        <div class="peche-feature">
+          <span class="peche-feature-title" data-fr="Pêche en Rivière" data-en="River Fishing">Pêche en Rivière</span>
+          <span class="peche-feature-desc" data-fr="Capitaines, carpes, silures — aventure sur les fleuves camerounais." data-en="Captain fish, carp, catfish — adventure on Cameroonian rivers.">Capitaines, carpes, silures — aventure sur les fleuves camerounais.</span>
+        </div>
+        <div class="peche-feature">
+          <span class="peche-feature-title" data-fr="Équipement Premium" data-en="Premium Equipment">Équipement Premium</span>
+          <span class="peche-feature-desc" data-fr="Bateaux équipés, matériel professionnel, guides experts locaux." data-en="Equipped boats, professional gear, expert local guides.">Bateaux équipés, matériel professionnel, guides experts locaux.</span>
+        </div>
+        <div class="peche-feature">
+          <span class="peche-feature-title" data-fr="Catch & Release" data-en="Catch & Release">Catch & Release</span>
+          <span class="peche-feature-desc" data-fr="Pratique responsable pour préserver les ressources marines uniques du Cameroun." data-en="Responsible practice to preserve Cameroon's unique marine resources.">Pratique responsable pour préserver les ressources marines uniques du Cameroun.</span>
+        </div>
+      </div>
+
+      <a href="#contact" class="btn-primary" data-fr="Planifier mon expédition" data-en="Plan My Expedition">Planifier mon expédition</a>
+    </div>
+
+    <div class="peche-gallery">
+      <img class="peche-img" src="assets/image/peche%20sportive%20cameoun%202.jpg" alt="Pêche en mer Cameroun">
+      <img class="peche-img" src="assets/image/les%20grandes%20etendus%20d%27eau%20du%20cameroun.jpg" alt="Pêche rivière Cameroun">
+      <img class="peche-img" src="assets/image/les%20grandes%20etendus%20d%27eau%20du%20cameroun%202.jpg" alt="Coucher de soleil Cameroun">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ GALERIE ══════════ -->
+<section id="galerie">
+  <div style="max-width:1280px; margin:0 auto;">
+    <div class="section-header reveal">
+      <span class="section-eyebrow" data-fr="Photos & Vidéos" data-en="Photos & Videos">Photos & Vidéos</span>
+      <h2 class="section-title" data-fr="Le Cameroun en <em>images</em>" data-en="Cameroon in <em>images</em>">Le Cameroun en <em>images</em></h2>
+      <div class="section-rule"></div>
+      <p class="section-desc" data-fr="Laissez-vous transporter par la beauté brute et préservée du Cameroun, l'Afrique en miniature." data-en="Let yourself be carried away by the raw, preserved beauty of Cameroon, Africa in Miniature.">Laissez-vous transporter par la beauté brute et préservée du Cameroun.</p>
+    </div>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/image/R%C3%A9serve%20de%20faune%20du%20Dja.jpg" alt="Forêt tropicale Cameroun">
+      <div class="gallery-item-overlay"><span class="gallery-zoom">⊕</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/image/Campement_au_parc_national_de_Waza_dans_la_r%C3%A9gion_de_l%27Extr%C3%AAme-Nord_au_Cameroun.jpg" alt="Éléphant Waza">
+      <div class="gallery-item-overlay"><span class="gallery-zoom">⊕</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/image/les%20grandes%20etendus%20d%27eau%20du%20cameroun.jpg" alt="Lac Cameroun">
+      <div class="gallery-item-overlay"><span class="gallery-zoom">⊕</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/image/plage%20de%20kribi.jpg" alt="Plage Kribi">
+      <div class="gallery-item-overlay"><span class="gallery-zoom">⊕</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/image/Hautes%20Terres%20de%20l%27Ouest.jpg" alt="Hautes terres Ouest">
+      <div class="gallery-item-overlay"><span class="gallery-zoom">⊕</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/image/hero%20section%205.webp" alt="Coucher de soleil Cameroun">
+      <div class="gallery-item-overlay"><span class="gallery-zoom">⊕</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/image/eascension-mont-cameroun-nirvatravel-agence.jpg" alt="Mont Cameroun">
+      <div class="gallery-item-overlay"><span class="gallery-zoom">⊕</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/image/les%20grandes%20etendus%20d%27eau%20du%20cameroun%202.jpg" alt="Étendues d'eau">
+      <div class="gallery-item-overlay"><span class="gallery-zoom">⊕</span></div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:3rem;">
+    <a href="https://www.youtube.com/@NatureCamer" target="_blank" rel="noopener" class="btn-primary" data-fr="▶ Voir la vidéo immersive" data-en="▶ Watch the Immersive Video">▶ Voir la vidéo immersive</a>
+  </div>
+</section>
+
+<!-- ══════════ TÉMOIGNAGES ══════════ -->
+<section id="temoignages">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="section-header reveal">
+      <span class="section-eyebrow" data-fr="Ils ont vécu l'expérience" data-en="They Lived the Experience">Ils ont vécu l'expérience</span>
+      <h2 class="section-title" data-fr="Ce que disent nos <em>voyageurs</em>" data-en="What our <em>travellers</em> say">Ce que disent nos <em>voyageurs</em></h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="temoignages-slider" id="temoSlider">
+      <div class="temoignage-item active">
+        <div class="temoignage-stars">★★★★★</div>
+        <p class="temoignage-text" data-fr="« L'ascension du Mont Cameroun restera le plus beau défi de ma vie. Les guides étaient incroyables, les paysages à couper le souffle. Une expérience qui transforme. »" data-en="« Climbing Mount Cameroon was the greatest challenge of my life. The guides were incredible, the landscapes breathtaking. A transformative experience. »">
+          « L'ascension du Mont Cameroun restera le plus beau défi de ma vie. Les guides étaient incroyables, les paysages à couper le souffle. Une expérience qui transforme. »
+        </p>
+        <p class="temoignage-author">Claire Dubois</p>
+        <p class="temoignage-origin" data-fr="Bruxelles, Belgique — Trek Mont Cameroun 2024" data-en="Brussels, Belgium — Mount Cameroon Trek 2024">Bruxelles, Belgique — Trek Mont Cameroun 2024</p>
+      </div>
+
+      <div class="temoignage-item">
+        <div class="temoignage-stars">★★★★★</div>
+        <p class="temoignage-text" data-fr="« Le safari à Waza dépassait tous mes rêves. Voir des éléphants en liberté dans ce cadre préservé, c'est magique. Et les lodges étaient d'un confort exceptionnel. »" data-en="« The Waza safari exceeded all my dreams. Seeing wild elephants in this preserved setting is magical. And the lodges were exceptionally comfortable. »">
+          « Le safari à Waza dépassait tous mes rêves. Voir des éléphants en liberté dans ce cadre préservé, c'est magique. Et les lodges étaient d'un confort exceptionnel. »
+        </p>
+        <p class="temoignage-author">Marc & Sophie Lefèvre</p>
+        <p class="temoignage-origin" data-fr="Genève, Suisse — Safari Waza 2024" data-en="Geneva, Switzerland — Waza Safari 2024">Genève, Suisse — Safari Waza 2024</p>
+      </div>
+
+      <div class="temoignage-item">
+        <div class="temoignage-stars">★★★★★</div>
+        <p class="temoignage-text" data-fr="« Kribi est un petit coin de paradis. Les chutes de la Lobé tombant directement dans l'océan, les plages désertes, les fruits de mer grillés… Nous reviendrons, c'est certain. »" data-en="« Kribi is a little piece of paradise. The Lobé waterfalls falling directly into the ocean, the deserted beaches, the grilled seafood… We will return, that's certain. »">
+          « Kribi est un petit coin de paradis. Les chutes de la Lobé tombant directement dans l'océan, les plages désertes, les fruits de mer grillés… Nous reviendrons, c'est certain. »
+        </p>
+        <p class="temoignage-author">Anna & Carlos Rivera</p>
+        <p class="temoignage-origin" data-fr="Madrid, Espagne — Escapade Kribi 2024" data-en="Madrid, Spain — Kribi Getaway 2024">Madrid, Espagne — Escapade Kribi 2024</p>
+      </div>
+    </div>
+
+    <div class="temo-controls">
+      <button class="temo-btn" onclick="temoNav(-1)">←</button>
+      <button class="temo-btn" onclick="temoNav(1)">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section id="contact">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="section-header reveal">
+      <span class="section-eyebrow" data-fr="Contact & Réservation" data-en="Contact & Booking">Contact & Réservation</span>
+      <h2 class="section-title" data-fr="Planifiez votre <em>aventure</em>" data-en="Plan your <em>adventure</em>">Planifiez votre <em>aventure</em></h2>
+      <div class="section-rule"></div>
+      <p class="section-desc" data-fr="Notre équipe répond à toutes vos questions et vous accompagne dans la création de votre voyage sur mesure au Cameroun." data-en="Our team answers all your questions and accompanies you in creating your tailor-made journey to Cameroon.">Notre équipe répond à toutes vos questions et vous accompagne dans la création de votre voyage sur mesure.</p>
+    </div>
+  </div>
+
+  <div class="contact-grid" style="max-width:1100px; margin:0 auto;">
+    <div class="contact-info reveal">
+      <h3 class="contact-brand"><em>Nature</em> Camer</h3>
+      <span class="contact-tagline" data-fr="NC — L'Afrique en miniature vous attend." data-en="NC — Africa in Miniature is waiting for you.">NC — L'Afrique en miniature vous attend.</span>
+
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <span class="contact-item-label" data-fr="Adresse" data-en="Address">Adresse</span>
+            <span class="contact-item-value">Douala, République du Cameroun</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <span class="contact-item-label">WhatsApp</span>
+            <span class="contact-item-value">+237 6 90 00 00 00</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <span class="contact-item-label">Email</span>
+            <span class="contact-item-value">contact@naturecamer.com</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🌍</div>
+          <div>
+            <span class="contact-item-label" data-fr="Langues" data-en="Languages">Langues</span>
+            <span class="contact-item-value" data-fr="Français · English" data-en="Français · English">Français · English</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-social">
+        <a href="#" class="social-btn" title="Facebook">f</a>
+        <a href="#" class="social-btn" title="Instagram">in</a>
+        <a href="#" class="social-btn" title="YouTube">▶</a>
+        <a href="https://wa.me/237690000000" class="social-btn" title="WhatsApp">W</a>
+        <a href="#" class="social-btn" title="TripAdvisor">✦</a>
+      </div>
+    </div>
+
+    <div class="contact-form reveal">
+      <h3 class="form-title" data-fr="Demande de devis & réservation" data-en="Quote Request & Booking">Demande de devis & réservation</h3>
+      <p class="form-subtitle" data-fr="Réponse garantie sous 24h" data-en="Response guaranteed within 24h">Réponse garantie sous 24h</p>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" data-fr="Prénom" data-en="First Name">Prénom</label>
+          <input type="text" class="form-input" placeholder="Jean">
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-fr="Nom" data-en="Last Name">Nom</label>
+          <input type="text" class="form-input" placeholder="Dupont">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-input" placeholder="jean@email.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-fr="Téléphone / WhatsApp" data-en="Phone / WhatsApp">Téléphone / WhatsApp</label>
+          <input type="tel" class="form-input" placeholder="+237 6 00 00 00 00">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" data-fr="Type de séjour" data-en="Trip Type">Type de séjour</label>
+        <select class="form-select">
+          <option value="" data-fr="Sélectionner..." data-en="Select...">Sélectionner...</option>
+          <option data-fr="Trek & Montagne" data-en="Trek & Mountain">Trek & Montagne</option>
+          <option data-fr="Safari & Nature" data-en="Safari & Nature">Safari & Nature</option>
+          <option data-fr="Plages & Côtes" data-en="Beaches & Coasts">Plages & Côtes</option>
+          <option data-fr="Pêche Sportive" data-en="Sport Fishing">Pêche Sportive</option>
+          <option data-fr="Circuit Culturel" data-en="Cultural Tour">Circuit Culturel</option>
+          <option data-fr="Grand Tour Premium" data-en="Grand Premium Tour">Grand Tour Premium</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" data-fr="Date souhaitée" data-en="Desired Date">Date souhaitée</label>
+          <input type="date" class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-fr="Nombre de personnes" data-en="Number of people">Nombre de personnes</label>
+          <input type="number" class="form-input" min="1" max="20" placeholder="2">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" data-fr="Votre message" data-en="Your Message">Votre message</label>
+        <textarea class="form-textarea" placeholder="Décrivez votre voyage idéal au Cameroun..."></textarea>
+      </div>
+
+      <button class="btn-submit" onclick="submitForm(this)" data-fr="Envoyer ma demande →" data-en="Send My Request →">Envoyer ma demande →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <p class="footer-brand-name">Nature Camer</p>
+      <span class="footer-brand-tag" data-fr="NC — Afrique en miniature" data-en="NC — Africa in Miniature">NC — Afrique en miniature</span>
+      <p class="footer-brand-desc" data-fr="Agence spécialisée en écotourisme, expériences culturelles, séjours nature, trekking et pêche sportive au Cameroun. Nous vous ouvrons les portes d'un pays aux mille visages." data-en="Agency specializing in ecotourism, cultural experiences, nature stays, trekking and sport fishing in Cameroon. We open the doors to a thousand-faced country.">
+        Agence spécialisée en écotourisme, expériences culturelles, séjours nature, trekking et pêche sportive au Cameroun. Nous vous ouvrons les portes d'un pays aux mille visages.
+      </p>
+    </div>
+
+    <div>
+      <p class="footer-col-title" data-fr="Découvrir" data-en="Explore">Découvrir</p>
+      <ul class="footer-links">
+        <li><a href="#destinations" data-fr="Destinations" data-en="Destinations">Destinations</a></li>
+        <li><a href="#circuits" data-fr="Circuits touristiques" data-en="Tours">Circuits touristiques</a></li>
+        <li><a href="#peche" data-fr="Pêche & Aventure" data-en="Fishing & Adventure">Pêche & Aventure</a></li>
+        <li><a href="#galerie" data-fr="Galerie photos" data-en="Photo Gallery">Galerie photos</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer-col-title" data-fr="Informations" data-en="Information">Informations</p>
+      <ul class="footer-links">
+        <li><a href="#about" data-fr="À propos de Nature Camer" data-en="About Nature Camer">À propos de Nature Camer</a></li>
+        <li><a href="#" data-fr="Conditions générales" data-en="Terms & Conditions">Conditions générales</a></li>
+        <li><a href="#" data-fr="Politique de confidentialité" data-en="Privacy Policy">Politique de confidentialité</a></li>
+        <li><a href="#" data-fr="Visa & Entrée au Cameroun" data-en="Visa & Entry to Cameroon">Visa & Entrée au Cameroun</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer-col-title" data-fr="Contact" data-en="Contact">Contact</p>
+      <ul class="footer-links">
+        <li><a href="tel:+237690000000">+237 6 90 00 00 00</a></li>
+        <li><a href="mailto:contact@naturecamer.com">contact@naturecamer.com</a></li>
+        <li><a href="#" data-fr="Douala, Cameroun" data-en="Douala, Cameroon">Douala, Cameroun</a></li>
+        <li><a href="https://wa.me/237690000000" target="_blank" data-fr="WhatsApp direct" data-en="Direct WhatsApp">WhatsApp direct</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy" data-fr="© 2025 Nature Camer. Tous droits réservés." data-en="© 2025 Nature Camer. All rights reserved.">© 2025 Nature Camer. Tous droits réservés.</p>
+    <p class="footer-motto" data-fr="« Le Cameroun vous attend. »" data-en="« Cameroon is waiting for you. »">« Le Cameroun vous attend. »</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
